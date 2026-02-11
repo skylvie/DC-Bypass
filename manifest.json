@@ -1,0 +1,17 @@
+{
+    "name": "DC Bypass",
+    "version": "1.0",
+    "manifest_version": 3,
+    "permissions": [
+        "declarativeNetRequest",
+        "declarativeNetRequestWithHostAccess",
+        "webNavigation"
+    ],
+    "host_permissions": [
+        "https://*.doublecounter.gg/*",
+        "https://stat.ripe.net/*"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    }
+}
