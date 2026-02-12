@@ -1,4 +1,3 @@
-const COMCAST_ASN = 'AS7922';
 const URL = `https://stat.ripe.net/data/announced-prefixes/data.json?resource=AS7922`;
 
 function parseCIDR(cidr) {
@@ -68,11 +67,6 @@ async function updateHeaderRules(ip) {
             requestHeaders: [
                 {
                     header: 'X-Forwarded-For',
-                    operation: 'set',
-                    value: ip
-                },
-                {
-                    header: 'X-Real-IP',
                     operation: 'set',
                     value: ip
                 }
